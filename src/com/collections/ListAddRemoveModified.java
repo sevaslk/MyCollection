@@ -1,26 +1,20 @@
 package com.collections;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
-public class MyCollection {
-    private ArrayList<Integer> list = new ArrayList<>();
+public class ListAddRemoveModified {
+    private List<Integer> list = new ArrayList<>();
 
-    public int get(int index) {
-        return list.get(index);
-    }
-
-    public boolean contains(Object o) {
-        return list.contains(o);
-    }
-
-    public boolean add(int element) {
+    public boolean addMod(int element) {
         for (int i = 0; i < list.size(); i++) {
             list.set(i, list.get(i) + element);
         }
         return list.add(element);
     }
 
-    public void remove(int element) {
+    public void removeMod(int element) {
         int temp = list.get(element);
         list.remove(element);
         for (int i = 0; i < list.size(); i++) {
@@ -28,24 +22,20 @@ public class MyCollection {
         }
     }
 
+    public int get(int index) {
+        return list.get(index);
+    }
+
+    public boolean contains(Integer integer) {
+        return list.contains(integer);
+    }
+
     public int max() {
-        int max = list.get(0);
-        for (Integer i : list) {
-            if (max < i) {
-                max = i;
-            }
-        }
-        return max;
+        return Collections.max(list);
     }
 
     public int min() {
-        int min = list.get(0);
-        for (Integer i : list) {
-            if (min > i) {
-                min = i;
-            }
-        }
-        return min;
+        return Collections.min(list);
     }
 
     public double avg() {
