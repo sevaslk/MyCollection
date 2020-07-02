@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class ListAddRemoveModified {
+public class ListWithAddRemoveModified {
     private List<Integer> list = new ArrayList<>();
 
     public boolean addMod(int element) {

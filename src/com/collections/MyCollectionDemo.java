@@ -2,7 +2,7 @@ package com.collections;
 
 public class MyCollectionDemo {
     public static void main(String[] args) {
-        ListAddRemoveModified collection = new ListAddRemoveModified();
+        ListWithAddRemoveModified collection = new ListWithAddRemoveModified();
         collection.addMod(1);
         collection.addMod(2);
         collection.addMod(3);
